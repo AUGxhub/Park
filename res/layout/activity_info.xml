@@ -1,0 +1,219 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <LinearLayout
+        android:id="@+id/titleLin"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:background="#33b5e5"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tx_port"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="1"
+            android:text="XXX停车场"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF" >
+        </TextView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="车位:"
+            android:textColor="#FFFFFF" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tx_left_num"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="#FFFFFF" >
+        </TextView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="/"
+            android:textColor="#FFFFFF" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tx_sum_num"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="90"
+            android:textColor="#FFFFFF" >
+        </TextView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/showcartext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dip"
+            android:layout_toRightOf="@id/date"
+            android:paddingLeft="3dip"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="#33b1df"
+            android:clickable="true"
+            android:text="确定"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/cost_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btn_submit"
+            android:paddingLeft="3dip"
+            android:paddingRight="3dip"
+            android:text="元/小时"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tx_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/cost_yuan"
+            android:paddingLeft="3dip"
+            android:paddingRight="3dip"
+            android:text="0"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tx_cost"
+            android:paddingLeft="3dip"
+            android:paddingRight="3dip"
+            android:text="预计费用 "
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/car1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showcartext"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/car_select"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="已选" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/car_empty"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="可选" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/car_selled"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="已售" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/car3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/car1"
+        android:orientation="horizontal"
+        android:padding="20dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/carraw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#33b5e5"
+                        android:gravity="left"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/carviewcont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="10dip" >
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

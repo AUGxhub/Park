@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.test.MainActivity" >
+
+    <item
+        android:id="@+id/act_serach"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/act_serach"
+        android:icon="@android:drawable/ic_menu_search"/>
+   <item
+        android:id="@+id/act_locating" 
+        android:orderInCategory="99"
+        android:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="@string/act_locating"/>
+    
+</menu>
