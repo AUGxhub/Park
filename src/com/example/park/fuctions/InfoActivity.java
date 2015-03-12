@@ -36,7 +36,7 @@ import com.example.park.main.MainActivity;
 import com.example.services.ExitAppService;
 
 public class InfoActivity extends Activity {
-
+	//hi test for github cvs
 	// 变量定义
 	MyHandler mHandler;
 	public static int ROW = 15;// 设置最大列数
