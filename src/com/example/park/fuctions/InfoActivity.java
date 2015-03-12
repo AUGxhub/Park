@@ -143,7 +143,7 @@ public class InfoActivity extends Activity {
 			}
 		});
 		// 初始化信息
-		Updadte_Info();
+//		Updadte_Info();
 	}
 
 	Runnable runnable = new Runnable() {
@@ -218,17 +218,17 @@ public class InfoActivity extends Activity {
 		}
 	}
 
-	public void Updadte_Info() {
-		Intent mIntent = getIntent();
-		Message msg = new Message();
-		Bundle mBundle = new Bundle();// 存放数据
-		mBundle.putString("port", mIntent.getStringExtra("port"));
-		mBundle.putString("left_num", mIntent.getStringExtra("left_num"));
-		mBundle.putString("sum_num", mIntent.getStringExtra("sum_num"));
-		mBundle.putString("cost", String.valueOf(carView.getSeat_num() * 10));
-		msg.setData(mBundle);
-		InfoActivity.this.mHandler.sendMessage(msg);
-	}
+//	public void Updadte_Info() {
+//		Intent mIntent = getIntent();
+//		Message msg = new Message();
+//		Bundle mBundle = new Bundle();// 存放数据
+//		mBundle.putString("port", mIntent.getStringExtra("port"));
+//		mBundle.putString("left_num", mIntent.getStringExtra("left_num"));
+//		mBundle.putString("sum_num", mIntent.getStringExtra("sum_num"));
+//		mBundle.putString("cost", String.valueOf(carView.getSeat_num() * 10));
+//		msg.setData(mBundle);
+//		InfoActivity.this.mHandler.sendMessage(msg);
+//	}
 
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -241,7 +241,7 @@ public class InfoActivity extends Activity {
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		// 响应触摸事件来更新信息
-		Updadte_Info();
+//		Updadte_Info();
 		// Toast.makeText(getApplicationContext(), "touch is ok", 0).show();
 		return false;
 	}

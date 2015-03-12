@@ -48,7 +48,7 @@ public class Fragment_GetMeIn extends Fragment implements OnItemClickListener {
 		strInfo = mintent.getStringExtra("strTime")
 				+ mintent.getStringExtra("strDeviceNum")
 				+ mintent.getStringExtra("strProvider");
-		// Toast.makeText(getActivity(), strInfo, Toast.LENGTH_LONG).show();
+//		 Toast.makeText(getActivity(), strInfo, Toast.LENGTH_LONG).show();
 		btnArrayCodeButton = (Button) rootView.findViewById(R.id.btn_code);
 		imgCodeImageView = (ImageView) rootView.findViewById(R.id.code_img);
 		getDCode();
